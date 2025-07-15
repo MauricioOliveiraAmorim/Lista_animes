@@ -1,0 +1,161 @@
+  /*ESTILO GERAL DA PÁGINA */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #181818;
+    color: #ffffff;
+  }
+
+  /* BORDAS LATERAIS NEON */
+  .borda-lateral {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 100vh;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #21adff, #ef7689);
+    box-shadow: 0 0 15px #21adff99;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .borda-esquerda {
+    left: 0;
+  }
+
+  .borda-direita {
+    right: 0;
+  }
+
+  /*TOPO (Barra superior azul com título e busca) */
+  .topbar {
+    background-color: #21adff;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .topbar h1 {
+    margin: 0;
+    font-size: 1.6em;
+  }
+
+  /*Campo de busca */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-container input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 1em;
+  }
+
+  /*FILTROS (ordem, status, nota) */
+  .filtros {
+    background-color: #1f1f1f;
+    padding: 20px 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+
+  .filtros select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #21adff;
+    background-color: #121212;
+    color: white;
+  }
+
+  /* CONTAINER DOS CARDS DE ANIME */
+  .anime-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+  }
+
+  /*ESTILO DOS CARDS DE ANIME */
+  .anime-card {
+    background-color: #202020;
+    border: 1px solid #21adff;
+    border-left: 5px solid #ef7689;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #21adff33;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Título do anime */
+  .anime-card h3 {
+    color: #21adff;
+    margin: 0;
+  }
+
+  /* Gêneros e descrição */
+  .anime-card p {
+    color: #ccc;
+    font-size: 0.9em;
+  }
+
+  /* Status (ex: Assistindo) */
+  .anime-card .status {
+    font-size: 0.85em;
+    color: #ef7689;
+  }
+
+  /* Nota do anime */
+  .anime-card .nota {
+    font-size: 0.85em;
+    color: #aaa;
+  }
+
+  /* 🎛️ BOTÕES DENTRO DO CARD */
+  .anime-card .botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  
+  /* Estilo base dos botões */
+  .botoes button {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+
+  /* Botão de editar com degradê */
+  .editar-btn {
+    background: linear-gradient(135deg, #21adff, #ef7689);
+    color: #181818;
+  }
+
+  /* Botão de remover em vermelho */
+  .remover-btn {
+    background-color: #ef7689;
+    color: white;
+  }
+
+  /* Efeito hover para os botões */
+  .editar-btn:hover,
+  .remover-btn:hover {
+    filter: brightness(1.1);
+  }

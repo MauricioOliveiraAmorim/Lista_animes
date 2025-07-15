@@ -1,0 +1,7 @@
+falta:
+
+notas
+status
+filtro pra pesquisa
+filtro pra lista(status/ nota)
+pesquisa por ordem de lançamento 
