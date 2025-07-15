@@ -12,7 +12,7 @@ Projeto pessoal feito em HTML, CSS e JavaScript para organizar, buscar e gerenci
 
 - HTML5
 - CSS3
-- JavaScript puro
+- JavaScript
 - API Jikan (MyAnimeList)
 
 ## Status
