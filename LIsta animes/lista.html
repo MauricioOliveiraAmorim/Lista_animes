@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Lista de Animes</title>
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Bordas laterais neon -->
+  <div class="borda-lateral borda-esquerda"></div>
+  <div class="borda-lateral borda-direita"></div>
+
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="topbar-esquerda">
+      <h1>Lista de animes</h1>
+    </div>
+    <div class="topbar-centro">
+      <h1 class="buscar">Buscar</h1>
+    </div>
+  </div>
+
+  <!-- Filtros -->
+  <div class="filtros">
+    <div class="search-container">
+      <input type="text" placeholder="Buscar na lista..." id="buscaLista">
+    </div>
+    <select id="ordem">
+      <option>Ordem Alfabética (A-Z)</option>
+      <option>Ordem Alfabética (Z-A)</option>
+    </select>
+    <select id="status">
+      <option>Status: Todos</option>
+      <option>Assistindo</option>
+      <option>Completo</option>
+      <option>Dropado</option>
+    </select>
+    <select id="nota">
+      <option>Nota: Todos</option>
+      <option>Nota ≥ 9</option>
+      <option>Nota ≥ 7</option>
+      <option>Nota ≤ 5</option>
+    </select>
+  </div>
+
+  <!-- Container de cards -->
+  <div class="anime-container" id="animeContainer">
+    <!-- Os cards serão inseridos aqui via JavaScript -->
+  </div>
+
+  <!-- Link do JS -->
+  <script src="main.js"></script>
+</body>
+</html>

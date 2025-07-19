@@ -30,13 +30,23 @@
 
   /*TOPO (Barra superior azul com título e busca) */
   .topbar {
-    background-color: #21adff;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  background-color: #21adff;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.topbar-esquerda {
+  margin-right: auto;
+}
+
+.topbar-centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
   .topbar h1 {
     margin: 0;
@@ -71,64 +81,79 @@
   .filtros select {
     padding: 8px 12px;
     border-radius: 5px;
-    border: 1px solid #21adff;
+    border-image: linear-gradient(to bottom, #21adff, #ef7689) 1;
     background-color: #121212;
     color: white;
   }
 
-  /* CONTAINER DOS CARDS DE ANIME */
-  .anime-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px;
-    justify-content: center;
-  }
+.anime-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 30px;
+  justify-content: center;
+}
 
-  /*ESTILO DOS CARDS DE ANIME */
-  .anime-card {
-    background-color: #202020;
-    border: 1px solid #21adff;
-    border-left: 5px solid #ef7689;
-    width: 280px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #21adff33;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+.anime-card.flex-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 18px;
+  width: 360px;
+  min-height: 130px;
+  padding: 16px 18px;
+  background: #181818;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0006;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* Título do anime */
-  .anime-card h3 {
-    color: #21adff;
-    margin: 0;
-  }
+.anime-card.flex-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 7px;
+  border-radius: 6px;
+  background: linear-gradient(to bottom, #21adff, #ef7689);
+}
 
-  /* Gêneros e descrição */
-  .anime-card p {
-    color: #ccc;
-    font-size: 0.9em;
-  }
+.anime-card.flex-card img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-left: 12px; /* Espaço para a linha colorida */
+}
 
-  /* Status (ex: Assistindo) */
-  .anime-card .status {
-    font-size: 0.85em;
-    color: #ef7689;
-  }
+.anime-card .anime-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+}
 
-  /* Nota do anime */
-  .anime-card .nota {
-    font-size: 0.85em;
-    color: #aaa;
-  }
+.anime-card .adicionar-btn {
+  margin-top: 8px;
+  padding: 6px 0;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(90deg, #21adff 60%, #ef7689 100%);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
 
-  /* 🎛️ BOTÕES DENTRO DO CARD */
-  .anime-card .botoes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
+.anime-card .adicionar-btn:hover {
+  background: linear-gradient(90deg, #21adff 30%, #ef7689 100%);
+}
 
   
   /* Estilo base dos botões */

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar Animes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="borda-lateral borda-esquerda"></div>
+  <div class="borda-lateral borda-direita"></div>
+
+  <div class="topbar">
+    <div class="topbar-esquerda">
+      <h1>Buscar animes</h1>
+    </div>
+    <div class="topbar-centro">
+      <h1 class="buscar">Pesquisar</h1>
+    </div>
+  </div>
+
+<div class="filtros">
+  <div class="search-container">
+    <select id="filtroGenero">
+      <option value="">Todos os gêneros</option>
+      <!-- Gêneros serão preenchidos via JS -->
+    </select>
+    <select id="filtroAno">
+      <option value="">Todos os anos</option>
+      <!-- Anos serão preenchidos via JS -->
+    </select>
+    <input type="text" placeholder="Buscar animes..." id="buscaAnimes">
+  </div>
+</div>
+  <div class="anime-container" id="animeContainer"></div>
+
+  <div class="paginacao" style="display:flex; justify-content:center; gap:10px; margin:20px 0;">
+    <button id="prevBtn">Anterior</button>
+    <span id="paginaAtual">1</span>
+    <button id="nextBtn">Próxima</button>
+  </div>
+
+  <script src="buscar.js"></script>
+</body>
+</html>
