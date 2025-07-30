@@ -38,6 +38,24 @@
   position: relative;
 }
 
+.topbar-btn {
+  color: #fff;
+  background: none;
+  padding: 0 18px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.6em;
+  transition: color 0.2s;
+  box-shadow: none;
+  display: inline-block;
+  border: none;
+}
+
+.topbar-btn:hover {
+  color: #bedef1;
+}
+
 .topbar-esquerda {
   margin-right: auto;
 }
@@ -184,3 +202,101 @@
   .remover-btn:hover {
     filter: brightness(1.1);
   }
+
+  .paginacao button {
+  background: linear-gradient(90deg, #21adff 60%, #ef7689 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.paginacao button:hover {
+  background: linear-gradient(90deg, #21adff 30%, #ef7689 100%);
+  color: #fff;
+}
+.paginacao span {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.popup-overlay {
+  position: fixed; left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 1000;
+}
+.popup-box {
+  background: #222; border-radius: 12px; padding: 24px 28px; min-width: 350px; max-width: 95vw; color: #fff; position: relative;
+}
+.popup-tabs { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.tab-btn { background: none; border: none; color: #fff; font-weight: bold; font-size: 1.1em; cursor: pointer; padding: 6px 12px; border-bottom: 2px solid transparent; }
+.tab-btn.active { border-bottom: 2px solid #21adff; }
+.popup-close { background: none; border: none; color: #fff; font-size: 1.5em; margin-left: auto; cursor: pointer; }
+.popup-anime-info {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.popup-anime-info img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0008;
+}
+
+.popup-anime-info > div {
+  flex: 1;
+  min-width: 0;
+}
+
+#popupAnimeDescricao {
+  font-size: 0.98em;
+  color: #ccc;
+  max-width: 260px;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+.popup-nota {
+  margin: 24px 0 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#notaAnime {
+  font-size: 1.3em;
+  width: 80px;
+  text-align: center;
+  margin: 8px 0 10px 0;
+  border-radius: 6px;
+  border: 1px solid #21adff;
+  background: #181818;
+  color: #fff;
+}
+
+.estrelas {
+  display: flex;
+  gap: 4px;
+  font-size: 2.3em;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.estrela {
+  color: #ccc;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.estrela.amarela {
+  color: #FFD700;
+}
